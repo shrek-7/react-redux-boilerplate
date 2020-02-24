@@ -1,13 +1,11 @@
-// import {} from './redux/actions/';
-// import {} from './redux/actions/';
-// import {} from './redux/actions/';
+import getAuthToken from './redux/actions';
 
-
-export const appState = (state) => ({
-  // userCounts: state.userReducer.data,
+export const appState = state => ({
+  auth: state.auth,
 });
 
-
-export const appDispatch = (dispatch) => ({
-  // getUsersCount: () => dispatch(getUsersCount())
+export const appDispatch = dispatch => ({
+  getAuthToken: () => dispatch(getAuthToken()),
 });
+
+export default appState;
